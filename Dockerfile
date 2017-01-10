@@ -11,8 +11,8 @@ RUN ["choco install julia --version 0.5.0 -y"]
 ENV HOMEDRIVE=C:
 ENV HOMEPATH=/Users/containerAdministrator
 
-#Verify julia package folder
-RUN echo "Verify julia package folder...this may take a while"
-RUN C:/Users/containerAdministrator/AppData/Local/julia-0.5.0/bin/julia.exe -e Pkg.resolve()
+#Verify julia installation
+RUN echo "Prints out a summary"
+RUN C:/Users/containerAdministrator/AppData/Local/julia-0.5.0/bin/julia.exe -e Pkg.status()
 
 CMD ["C:/Users/containerAdministrator/AppData/Local/julia-0.5.0/bin/julia.exe"]
