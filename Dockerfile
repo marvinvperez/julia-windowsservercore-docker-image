@@ -1,4 +1,4 @@
-FROM microsoft/windowsservercore
+FROM microsoft/windowsservercore:latest
 
 #install chocolatey package manager
 RUN ["powershell -NoProfile -ExecutionPolicy Bypass -Command iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"]
